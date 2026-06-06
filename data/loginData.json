@@ -1,0 +1,43 @@
+[
+  {
+    "description": "Đăng nhập thành công với thông tin đúng",
+    "email": "admin@admin.com",
+    "password": "admin123",
+    "expectedResult": "success"
+  },
+  {
+    "description": "Đăng nhập thất bại với email sai",
+    "email": "wrong@email.com",
+    "password": "admin123",
+    "expectedResult": "failure",
+    "expectedMessage": "BAD_CREDENTIALS"
+  },
+  {
+    "description": "Đăng nhập thất bại với password sai",
+    "email": "admin@admin.com",
+    "password": "wrongpassword",
+    "expectedResult": "failure",
+    "expectedMessage": "BAD_CREDENTIALS"
+  },
+  {
+    "description": "Đăng nhập thất bại với cả email và password đều sai",
+    "email": "wrong@email.com",
+    "password": "wrongpassword",
+    "expectedResult": "failure",
+    "expectedMessage": "BAD_CREDENTIALS"
+  },
+  {
+    "description": "Đăng nhập thất bại với email trống",
+    "email": "",
+    "password": "admin123",
+    "expectedResult": "failure",
+    "expectedMessage": "BAD_CREDENTIALS"
+  },
+  {
+    "description": "Đăng nhập thất bại với password trống",
+    "email": "admin@admin.com",
+    "password": "",
+    "expectedResult": "failure",
+    "expectedMessage": "BAD_CREDENTIALS"
+  }
+]

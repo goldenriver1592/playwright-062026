@@ -18,6 +18,7 @@
   "homepage": "https://github.com/goldenriver1592/playwright-api-exam#readme",
   "devDependencies": {
     "@playwright/test": "^1.60.0",
-    "@types/node": "^25.9.1"
+    "@types/node": "^25.9.1",
+    "csv-parse": "^6.2.1"
   }
 }

@@ -1,6 +1,6 @@
 import { test, expect } from '@fixtures/api.fixtures'
 import { isNonEmptyArray, isPositiveNumber, isNonEmptyString, isNonArrayObject } from '@utils/helpers'
-import { productData } from '@data/types/product_data';
+import { productData } from '@data/interfaces/product_data';
 
 // Test data dùng cho API tạo sản phẩm
 const testData: productData = {

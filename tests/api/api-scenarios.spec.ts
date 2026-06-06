@@ -1,6 +1,6 @@
 import { test, expect } from '@fixtures/api.fixtures'
 import { isNonEmptyArray, isPositiveNumber, isNonEmptyString, isNonArrayObject } from '@utils/helpers'
-import { productData } from '@data/types/product_data';
+import { productData } from '@data/interfaces/product_data';
 
 // Chạy tuần tự vì các bước trong scenario có phụ thuộc dữ liệu lẫn nhau
 test.describe.serial('PHẦN 2: TEST API THEO SCENARIO', () => {

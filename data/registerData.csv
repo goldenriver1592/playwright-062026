@@ -1,0 +1,7 @@
+description,firstName,lastName,phone,country,email,password,agree,expectedResult,expectedMessage
+"Đăng ký thành công với đầy đủ thông tin hợp lệ","Nguyen","Van A","0901234567","Vietnam","nguyenvana@test.com","Test123456",true,"success","The account has been successfully created!"
+"Đăng ký thành công khi không đồng ý điều khoản","Tran","Thi B","0912345678","Vietnam","tranthib@test.com","Test123456",false,"success","The account has been successfully created!"
+"Đăng ký thành công khi bỏ trống First Name","","Le C","0923456789","Thailand","lec@test.com","Test123456",true,"success","The account has been successfully created!"
+"Đăng ký thất bại khi bỏ trống Email","Pham","Van D","0934567890","Singapore","","Test123456",true,"failure","Please fill out this field."
+"Đăng ký thất bại khi bỏ trống Password","Hoang","Thi E","0945678901","Malaysia","hoangthie@test.com","",true,"failure","Please fill out this field."
+"Đăng ký thành công khi không chọn Country","Vo","Van F","0956789012","Select a country...","vovanf@test.com","Test123456",true,"success","The account has been successfully created!"
