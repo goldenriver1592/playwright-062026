@@ -1,3 +1,4 @@
+import { AUTH_FILE } from '@data/constants/auth.constant';
 import { defineConfig, devices } from '@playwright/test';
 
 /**
@@ -24,7 +25,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['html'],
-    ['list', { outputFoler: 'playwrigh-report'}],
+    ['list'],
   ],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
@@ -43,13 +44,22 @@ export default defineConfig({
   /* Configure projects for major browsers */
   projects: [
     {
+      name: 'setup',
+      testMatch: /setup\/global\.setup\.ts/
+    },
+    {
       name: 'api',
-      testMatch: /tests\/api\/.*\.spec\.ts/,
+      testMatch: /api\/.*\.spec\.ts/,
+      testIgnore: [/setup\/global\.setup\.ts/, /e2e\/.*\.spec\.ts/]
     },
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
-      testMatch: /tests\/e2e\/.*\.spec\.ts/
+      use: {
+        ...devices['Desktop Chrome'],
+        storageState: AUTH_FILE,
+      },
+      dependencies: ['setup'],
+      testMatch: /e2e\/.*\.spec\.ts/,
     },
 
     // {
